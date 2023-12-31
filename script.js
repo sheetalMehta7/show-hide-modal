@@ -21,3 +21,9 @@ function closeModalHandler() {
 closeModalBtn.addEventListener("click", closeModalHandler);
 overlayElement.addEventListener("click", closeModalHandler);
 
+//keyboard events: 
+//keypress(press key for long time), keydown(click any key), keyup(lift our finger from the key)
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modalElement.classList.contains("hidden")) closeModalHandler();
+})
